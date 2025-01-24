@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Ipanu</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Mi Inventario</div>
+            <div class="header-actions">
+                <button class="btn btn-header">Ayuda</button>
+                <button class="btn btn-header">Config</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="nav-item active">Activos</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="actions">
+                <button class="btn btn-secondary">Areas</button>
+                <!-- Iconos de las Areas -->
+                <div class="square-buttons">
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                    <div class="btn-square"></div>
+                </div>
+            </div>
+
+            <div class="table-controls">
+                <div class="records-per-page">
+                    <select>
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                    <span>records per page</span>
+                </div>
+                <div class="table-actions">
+                    <input type="search" placeholder="Busque Ps..." class="search-input">
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-perfect"></span>
+                    </button>
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-very-good"></span>
+                    </button>
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-good"></span>
+                    </button>
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-fair"></span>
+                    </button>
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-poor"></span>
+                    </button>
+                    <button class="btn btn-outline btn-rectangle">
+                        <span class="status-indicator status-bad"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Responsable</th>
+                            <th>Nombre de equipo</th>
+                            <th>Serial BIOS</th>
+                            <th>Ult. fecha mant.</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button class="btn btn-sm">···</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-success">Add Activo</button>
+                <div class="pagination-controls">
+                    <button class="btn btn-sm btn-outline">&lt;</button>
+                    <button class="btn btn-sm btn-outline btn-light-purple">1</button>
+                    <button class="btn btn-sm btn-outline">&gt;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

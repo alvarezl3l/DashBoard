@@ -1,0 +1,319 @@
+:root {
+  --color-primary: #4a90e2;
+  --color-secondary: #5a6acf;
+  --color-success: #27ae60;
+  --color-danger: #e74c3c;
+  --color-warning: #f39c12;
+  --color-info: #3498db;
+  --color-outline: #bdc3c7;
+  --color-outline-hover: #95a5a6;
+  --color-light-purple: #9b59b6;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 8px; /* Reducido de 15px */
+  left: 8px; /* Reducido de 15px */
+  right: 8px; /* Reducido de 15px */
+  z-index: 1000;
+  border-radius: 15px; /* Modificado: esquinas redondeadas en todas las esquinas */
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(100% - 40px); /* Update 2 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Update 3 */
+}
+
+.btn-header {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-header:hover {
+  background-color: var(--color-secondary);
+}
+
+.layout {
+  display: flex;
+  margin-top: 80px; /* Update 4 */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  height: calc(100vh - 80px); /* Update 5 */
+  position: fixed;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.nav-item.active {
+  background-color: #fff;
+}
+
+.nav-item:hover {
+  background-color: #f3f4f6;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.square-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-square {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--color-outline);
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.btn-square:hover {
+  border-color: var(--color-outline-hover);
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.records-per-page {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center; /* Update 1 */
+}
+
+.btn-rectangle {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: white;
+}
+
+.status-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  display: block;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* Actualización de los colores de los indicadores para una mejor transición */
+.status-perfect {
+  background-color: #2ecc71; /* Verde puro */
+}
+
+.status-very-good {
+  background-color: #7ed654; /* Verde con un toque de amarillo */
+}
+
+.status-good {
+  background-color: #b5de2b; /* Verde amarillento */
+}
+
+.status-fair {
+  background-color: #f1c40f; /* Amarillo */
+}
+
+.status-poor {
+  background-color: #e67e22; /* Naranja */
+}
+
+.status-bad {
+  background-color: #e74c3c; /* Rojo */
+}
+
+/* Asegurar que el botón contenedor mantenga la forma del círculo */
+.btn-outline {
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem; /* Reducido de 1rem para subir el botón Add Activo */
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center; /* Asegura que los botones estén alineados horizontalmente */
+}
+
+.pagination-controls .btn {
+  margin: 0; /* Elimina cualquier margen que pueda causar espaciado vertical */
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-light-purple {
+  background-color: #b19cd9;
+  color: #fff;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.header .btn {
+  background-color: transparent;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.header .btn:hover {
+  background-color: #f3f4f6;
+}
